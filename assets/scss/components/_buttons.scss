@@ -1,0 +1,27 @@
+.btn{
+    padding: .8rem 2rem;
+    border-radius: .5rem;
+    font-family: $primary-font;
+    font-weight: 600;
+    transition: background-color .3s ease, color .3s ease, transform .3s ease, border-color .3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+
+    &--primary{
+        @extend .btn;
+        border: 2px solid $primary-color-500;
+        background-color: $primary-color-500;
+        color: $white;
+
+        &:hover{
+            background-color: $white;
+            color: $primary-color-500;
+            transform: scale(1.05, 1.05);
+        }
+
+    }
+
+    
+}

@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+
+    .title-section{
+        @apply text-3xl leading-normal font-semibold;
+    }
+
+}

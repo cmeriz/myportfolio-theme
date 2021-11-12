@@ -1,0 +1,26 @@
+.skills{
+
+    &__title{
+
+        &::after{
+
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+    }
+
+    .technologies-carousel{
+
+        .slick-dots li button::before{
+            font-size: .7rem;
+            color: $secondary-color-400;
+        }
+
+        .slick-dots li.slick-active button::before{
+            color: $primary-color;
+        }
+
+    }
+
+}

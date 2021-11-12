@@ -1,0 +1,53 @@
+.main-navbar{
+    li{
+        flex: auto;
+
+        @include sm-size{
+            flex: none;
+        }
+
+    }
+}
+
+.nav-link{
+    display: block;
+    padding: 1.5em 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: background-color .3s ease;
+
+    @include sm-size{
+        padding: 1.5em 2em;
+    }
+
+    &:hover{
+        background-color: $primary-color-600;
+
+        .nav-link__icon{
+            transform: scale(1.2);
+        }
+    }
+
+    &__icon{
+        margin: auto;
+        width: auto;
+        height: 1.5rem;
+        transition: transform .3s ease;
+
+        path{
+            fill: $white;
+        }
+
+    }
+
+    &.active{
+        background-color: $primary-color-600;
+
+        .nav-link__icon{
+            transform: scale(1.2);
+        }
+
+    }
+        
+}

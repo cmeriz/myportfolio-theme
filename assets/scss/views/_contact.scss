@@ -1,0 +1,72 @@
+.contact{
+
+    &__title{
+        &::after{
+            margin-left: auto;
+            margin-right: auto;
+
+            @include md-size{
+                margin-left: 0;
+            }
+
+        }
+    }
+
+    &__info{
+        & > div{
+            display: flex;
+            flex-direction: column;
+            max-width: 24rem;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 1rem;
+
+            @include sm-size{
+                flex-direction: row;
+                max-width: none;
+            }
+
+            @include md-size{
+                flex-direction: column;
+            }
+
+            @include xl-size{
+                flex-direction: row;
+            }
+
+            .contact-data{
+                color: $secondary-color;
+                padding: 1.5rem;
+                text-align: center;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+                width: 100%;
+
+                &__icon{
+                    width: auto;
+                    height: 2.1rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 1rem;
+                    path{
+                        stroke: $secondary-color;
+                    }
+                }
+
+                &__label{
+                    font-weight: 600;
+                    margin-bottom: .5rem;
+                }
+
+                &__content{
+                    font-size: 0.875rem;
+
+                }
+
+
+            }
+
+        }
+
+    }
+
+}

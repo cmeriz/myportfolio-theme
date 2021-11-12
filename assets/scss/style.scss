@@ -1,13 +1,28 @@
 // Base
-    @import "base/fonts";
+    @import 'base/fonts';
+    @import 'base/reset';
 
 // Abstracts
-    @import "abstracts/colors";
-    @import "abstracts/mixins";
+    @import 'abstracts/colors';
+    @import 'abstracts/mixins';
+    @import 'abstracts/helpers';
+    @import 'abstracts/animations';
 
 // Layout
-    @import "layout/header";
-    @import "layout/footer";
+    @import 'layout/header';
+    @import 'layout/footer';
+
+// Components
+    @import 'components/navbar';
+    @import 'components/buttons';
+    @import 'components/skill-card';
+    @import 'components/project-card';
+    @import 'components/project-modal';
+    @import 'components/modal-background';
+    @import 'components/loader';
 
 // Pages
-    @import "views/home";
+    @import 'views/about';
+    @import 'views/skills';
+    @import 'views/portfolio';
+    @import 'views/contact';

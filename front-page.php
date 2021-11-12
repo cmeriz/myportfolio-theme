@@ -1,5 +1,12 @@
-<?php get_header(); ?>
+<?php 
 
-<h1>Toda historia tiene un comienzo...</h1>
+get_header();
 
-<?php get_footer(); ?>
+require_once 'inc/partials/about.php';
+require_once 'inc/partials/skills.php';
+require_once 'inc/partials/portfolio.php';
+require_once 'inc/partials/contact.php';
+
+get_footer(); 
+
+?>

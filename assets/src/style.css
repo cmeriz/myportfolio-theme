@@ -1,3 +1,869 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* line 1, ../scss/base/_reset.scss */
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3em;
+}
+
+/* line 1, ../scss/abstracts/_helpers.scss */
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 80rem;
+}
+@media screen and (min-width: 48rem) {
+  /* line 1, ../scss/abstracts/_helpers.scss */
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  /* line 13, ../scss/abstracts/_helpers.scss */
+  .card {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+}
+
+/* line 24, ../scss/abstracts/_helpers.scss */
+.inside-card {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* line 30, ../scss/abstracts/_helpers.scss */
+.title-section::after {
+  display: block;
+  content: '';
+  height: 4px;
+  width: 4rem;
+  margin-top: 1rem;
+  background-color: #1AAC7A;
+}
+
+/* line 40, ../scss/abstracts/_helpers.scss */
+.text-primary {
+  color: #1AAC7A;
+}
+
+/* line 44, ../scss/abstracts/_helpers.scss */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+/* line 2, ../scss/abstracts/_animations.scss */
+.init-fadeIn, .init-fadeInZoom,
+.init-fadeInU2D, .init-fadeInU2D-lg, .init-fadeInD2U,
+.init-fadeInL2R, .init-fadeInR2L, .init-heroTitle,
+.init-fadeInL2R-lg, .init-fadeInR2L-lg, .init-fadeInRotateClock-sm {
+  opacity: 0;
+  transition: all 1s ease;
+  transition: height 0s, width 0s;
+}
+
+/* line 11, ../scss/abstracts/_animations.scss */
+.init-slideInD2U {
+  transform: translateY(100%);
+}
+
+/* line 20, ../scss/abstracts/_animations.scss */
+.fadeIn {
+  -webkit-animation: fadeIn 1s both;
+  animation: fadeIn 1s both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 47, ../scss/abstracts/_animations.scss */
+.fadeInZoom {
+  -webkit-animation: fadeInZoom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fadeInZoom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes fadeInZoom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fadeInZoom {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* line 82, ../scss/abstracts/_animations.scss */
+.fadeInU2D {
+  -webkit-animation: fadeInU2D 1s both;
+  animation: fadeInU2D 1s both;
+}
+
+@-webkit-keyframes fadeInU2D {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInU2D {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 117, ../scss/abstracts/_animations.scss */
+.fadeInD2U {
+  -webkit-animation: fadeInD2U 1s both;
+  animation: fadeInD2U 1s both;
+}
+
+@-webkit-keyframes fadeInD2U {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInD2U {
+  0% {
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 151, ../scss/abstracts/_animations.scss */
+.fadeInL2R {
+  -webkit-animation: fadeInL2R 1s both;
+  animation: fadeInL2R 1s both;
+}
+
+@-webkit-keyframes fadeInL2R {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInL2R {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 186, ../scss/abstracts/_animations.scss */
+.fadeInR2L {
+  -webkit-animation: fadeInR2L 1s both;
+  animation: fadeInR2L 1s both;
+}
+
+@-webkit-keyframes fadeInR2L {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInR2L {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 221, ../scss/abstracts/_animations.scss */
+.fadeInL2R-lg {
+  -webkit-animation: fadeInL2R-lg 1s both;
+  animation: fadeInL2R-lg 1s both;
+}
+
+@-webkit-keyframes fadeInL2R-lg {
+  0% {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInL2R-lg {
+  0% {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* line 257, ../scss/abstracts/_animations.scss */
+.fadeInR2L-lg {
+  -webkit-animation: fadeInR2L-lg 1s both;
+  animation: fadeInR2L-lg 1s both;
+}
+
+@-webkit-keyframes fadeInR2L-lg {
+  0% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInR2L-lg {
+  0% {
+    -webkit-transform: translateX(500px);
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                            FADE IN UP TO DOWN LG                           */
+/* -------------------------------------------------------------------------- */
+/* line 292, ../scss/abstracts/_animations.scss */
+.fadeInU2D-lg {
+  -webkit-animation: fadeInU2D-lg 1s both;
+  animation: fadeInU2D-lg 1s both;
+}
+
+@-webkit-keyframes fadeInU2D-lg {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInU2D-lg {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* line 327, ../scss/abstracts/_animations.scss */
+.fadeInRotateClock-sm {
+  -webkit-animation: fadeInRotateClock-sm 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: fadeInRotateClock-sm 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes fadeInRotateClock-sm {
+  0% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInRotateClock-sm {
+  0% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+/* line 362, ../scss/abstracts/_animations.scss */
+.slideInD2U {
+  -webkit-animation: slideInD2U 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideInD2U 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slideInD2U {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes slideInD2U {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* line 393, ../scss/abstracts/_animations.scss */
+.slideOutU2D {
+  -webkit-animation: slideOutU2D 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slideOutU2D 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slideOutU2D {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+@keyframes slideOutU2D {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+/* line 1, ../scss/layout/_header.scss */
+.custom-logo-link img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+/* line 7, ../scss/layout/_header.scss */
+.header {
+  z-index: 4;
+}
+@media screen and (min-width: 48rem) {
+  /* line 7, ../scss/layout/_header.scss */
+  .header {
+    padding-left: 40px;
+    padding-right: 40px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+/* line 17, ../scss/layout/_header.scss */
+.header__logo {
+  width: 20%;
+}
+/* line 21, ../scss/layout/_header.scss */
+.header__social {
+  width: 20%;
+}
+/* line 23, ../scss/layout/_header.scss */
+.header__social ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* line 29, ../scss/layout/_header.scss */
+.header__social svg {
+  height: 1.2rem;
+  transition: transform .3s ease;
+}
+/* line 33, ../scss/layout/_header.scss */
+.header__social svg:hover {
+  transform: scale(1.2);
+}
+/* line 38, ../scss/layout/_header.scss */
+.header__social svg path {
+  fill: #FFFFFF;
+}
+/* line 44, ../scss/layout/_header.scss */
+.header__social li {
+  margin-left: 1.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  /* line 1, ../scss/layout/_footer.scss */
+  .footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+}
+
+/* line 2, ../scss/components/_navbar.scss */
+.main-navbar li {
+  flex: auto;
+}
+@media screen and (min-width: 40rem) {
+  /* line 2, ../scss/components/_navbar.scss */
+  .main-navbar li {
+    flex: none;
+  }
+}
+
+/* line 12, ../scss/components/_navbar.scss */
+.nav-link {
+  display: block;
+  padding: 1.5em 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .9rem;
+  transition: background-color .3s ease;
+}
+@media screen and (min-width: 40rem) {
+  /* line 12, ../scss/components/_navbar.scss */
+  .nav-link {
+    padding: 1.5em 2em;
+  }
+}
+/* line 24, ../scss/components/_navbar.scss */
+.nav-link:hover {
+  background-color: #179b6e;
+}
+/* line 27, ../scss/components/_navbar.scss */
+.nav-link:hover .nav-link__icon {
+  transform: scale(1.2);
+}
+/* line 32, ../scss/components/_navbar.scss */
+.nav-link__icon {
+  margin: auto;
+  width: auto;
+  height: 1.5rem;
+  transition: transform .3s ease;
+}
+/* line 38, ../scss/components/_navbar.scss */
+.nav-link__icon path {
+  fill: #FFFFFF;
+}
+/* line 44, ../scss/components/_navbar.scss */
+.nav-link.active {
+  background-color: #179b6e;
+}
+/* line 47, ../scss/components/_navbar.scss */
+.nav-link.active .nav-link__icon {
+  transform: scale(1.2);
+}
+
+/* line 1, ../scss/components/_buttons.scss */
+.btn, .btn--primary {
+  padding: .8rem 2rem;
+  border-radius: .5rem;
+  font-family: "Poppins";
+  font-weight: 600;
+  transition: background-color .3s ease, color .3s ease, transform .3s ease, border-color .3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 12, ../scss/components/_buttons.scss */
+.btn--primary {
+  border: 2px solid #1aac7a;
+  background-color: #1aac7a;
+  color: #FFFFFF;
+}
+/* line 18, ../scss/components/_buttons.scss */
+.btn--primary:hover {
+  background-color: #FFFFFF;
+  color: #1aac7a;
+  transform: scale(1.05, 1.05);
+}
+
+/* line 1, ../scss/components/_skill-card.scss */
+.skill-card {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+/* line 5, ../scss/components/_skill-card.scss */
+.skill-card svg {
+  width: auto;
+  height: 2.3rem;
+}
+/* line 9, ../scss/components/_skill-card.scss */
+.skill-card svg path {
+  stroke: #333333;
+}
+
+/* line 1, ../scss/components/_project-card.scss */
+.project-card {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+/* line 6, ../scss/components/_project-card.scss */
+.project-card:hover .project-card__content {
+  opacity: 1;
+}
+/* line 12, ../scss/components/_project-card.scss */
+.project-card__content {
+  background-color: #FFFFFF;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+@media screen and (min-width: 64rem) {
+  /* line 12, ../scss/components/_project-card.scss */
+  .project-card__content {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+  }
+}
+/* line 26, ../scss/components/_project-card.scss */
+.project-card .btn--primary:hover {
+  background-color: #1AAC7A;
+  color: #FFFFFF;
+}
+
+/* line 1, ../scss/components/_project-modal.scss */
+.project-modal-container {
+  z-index: 6;
+  animation-duration: .4s;
+}
+
+/* line 6, ../scss/components/_project-modal.scss */
+.project-modal {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+@media screen and (min-width: 48rem) {
+  /* line 6, ../scss/components/_project-modal.scss */
+  .project-modal {
+    width: 80%;
+    height: 80%;
+    border-radius: .5em;
+  }
+}
+
+/* line 1, ../scss/components/_modal-background.scss */
+.modal-background {
+  animation-duration: .4s;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 5;
+}
+@media screen and (min-width: 48rem) {
+  /* line 1, ../scss/components/_modal-background.scss */
+  .modal-background {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+/* line 1, ../scss/components/_loader.scss */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #1AAC7A;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 48rem) {
+  /* line 3, ../scss/views/_about.scss */
+  .about__column1 {
+    margin-top: 5vw;
+  }
+}
+@media screen and (min-width: 64rem) {
+  /* line 3, ../scss/views/_about.scss */
+  .about__column1 {
+    margin-top: 7vw;
+  }
+}
+@media screen and (min-width: 96rem) {
+  /* line 3, ../scss/views/_about.scss */
+  .about__column1 {
+    margin-top: 7rem;
+  }
+}
+/* line 21, ../scss/views/_about.scss */
+.about__title::after {
+  display: none;
+}
+/* line 27, ../scss/views/_about.scss */
+.about__paragraph {
+  animation-delay: .2s;
+}
+/* line 33, ../scss/views/_about.scss */
+.about__social-links ul {
+  text-align: center;
+}
+/* line 37, ../scss/views/_about.scss */
+.about__social-links li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+/* line 41, ../scss/views/_about.scss */
+.about__social-links li:last-of-type {
+  margin-right: 0;
+}
+/* line 47, ../scss/views/_about.scss */
+.about__social-links a {
+  display: block;
+}
+/* line 51, ../scss/views/_about.scss */
+.about__social-links svg {
+  height: 2rem;
+}
+/* line 55, ../scss/views/_about.scss */
+.about__social-links .facebook-link path {
+  fill: #1877F2;
+}
+/* line 59, ../scss/views/_about.scss */
+.about__social-links .twitter-link path {
+  fill: #1DA1F2;
+}
+/* line 63, ../scss/views/_about.scss */
+.about__social-links .linkedin-link path {
+  fill: #0274B3;
+}
+/* line 67, ../scss/views/_about.scss */
+.about__social-links .github-link path {
+  fill: #171515;
+}
+/* line 73, ../scss/views/_about.scss */
+.about__buttons {
+  animation-delay: .4s;
+}
+/* line 77, ../scss/views/_about.scss */
+.about__photo {
+  animation-duration: 1.2s;
+}
+
+/* line 5, ../scss/views/_skills.scss */
+.skills__title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 15, ../scss/views/_skills.scss */
+.skills .technologies-carousel .slick-dots li button::before {
+  font-size: .7rem;
+  color: #707070;
+}
+/* line 20, ../scss/views/_skills.scss */
+.skills .technologies-carousel .slick-dots li.slick-active button::before {
+  color: #1AAC7A;
+}
+
+/* line 5, ../scss/views/_portfolio.scss */
+.portfolio__title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 14, ../scss/views/_portfolio.scss */
+.single-project {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* line 18, ../scss/views/_portfolio.scss */
+.single-project::-webkit-scrollbar {
+  display: none;
+}
+/* line 24, ../scss/views/_portfolio.scss */
+.single-project__carousel .slick-dots {
+  bottom: -50px;
+}
+/* line 28, ../scss/views/_portfolio.scss */
+.single-project__carousel .slick-dots li button::before {
+  font-size: .7rem;
+  color: #707070;
+}
+/* line 33, ../scss/views/_portfolio.scss */
+.single-project__carousel .slick-dots li.slick-active button::before {
+  color: #1AAC7A;
+}
+/* line 40, ../scss/views/_portfolio.scss */
+.single-project__features li {
+  position: relative;
+  margin-left: 30px;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+}
+/* line 45, ../scss/views/_portfolio.scss */
+.single-project__features li::before {
+  position: absolute;
+  left: -30px;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%231AAC7A'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* line 59, ../scss/views/_portfolio.scss */
+.single-project__features li a {
+  color: #3B82F6;
+}
+
+/* line 4, ../scss/views/_contact.scss */
+.contact__title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 48rem) {
+  /* line 4, ../scss/views/_contact.scss */
+  .contact__title::after {
+    margin-left: 0;
+  }
+}
+/* line 16, ../scss/views/_contact.scss */
+.contact__info > div {
+  display: flex;
+  flex-direction: column;
+  max-width: 24rem;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 1rem;
+}
+@media screen and (min-width: 40rem) {
+  /* line 16, ../scss/views/_contact.scss */
+  .contact__info > div {
+    flex-direction: row;
+    max-width: none;
+  }
+}
+@media screen and (min-width: 48rem) {
+  /* line 16, ../scss/views/_contact.scss */
+  .contact__info > div {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 80rem) {
+  /* line 16, ../scss/views/_contact.scss */
+  .contact__info > div {
+    flex-direction: row;
+  }
+}
+/* line 37, ../scss/views/_contact.scss */
+.contact__info > div .contact-data {
+  color: #333333;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  width: 100%;
+}
+/* line 44, ../scss/views/_contact.scss */
+.contact__info > div .contact-data__icon {
+  width: auto;
+  height: 2.1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+/* line 50, ../scss/views/_contact.scss */
+.contact__info > div .contact-data__icon path {
+  stroke: #333333;
+}
+/* line 55, ../scss/views/_contact.scss */
+.contact__info > div .contact-data__label {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+/* line 60, ../scss/views/_contact.scss */
+.contact__info > div .contact-data__content {
+  font-size: 0.875rem;
+}
 
 /*# sourceMappingURL=style.css.map */

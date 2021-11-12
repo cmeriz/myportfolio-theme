@@ -1,0 +1,9 @@
+.modal-background{
+    animation-duration: .4s;
+    background-color: rgba($white, .9);
+    z-index: 5;
+
+    @include md-size{
+        background-color: rgba($black, .9);
+    }
+}
