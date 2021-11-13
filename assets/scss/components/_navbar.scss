@@ -21,9 +21,14 @@
         padding: 1.5em 2em;
     }
 
-    &:hover{
-        background-color: $primary-color-600;
+    &:focus{
+        background-color: $primary-color;
+    }
 
+    &:hover{
+        @include md-size{
+            background-color: $primary-color-600;
+        }
         .nav-link__icon{
             transform: scale(1.2);
         }

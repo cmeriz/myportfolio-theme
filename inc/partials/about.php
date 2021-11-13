@@ -32,7 +32,7 @@
         </div>
 
         <figure class="about__column2 order-1 md:order-2 col-span-2 md:col-span-1">
-            <img class="about__photo mx-auto md:ml-auto md:mr-0 w-11/12 mb-10 md:mb-0 init-fadeInR2L" src="<?php the_post_thumbnail_url() ?>" alt="">
+            <?php the_post_thumbnail('post-thumbnail', ['class' => 'about__photo mx-auto md:ml-auto md:mr-0 w-11/12 mb-10 md:mb-0 init-fadeInR2L', 'title' => 'Carlos Merizalde']); ?>
         </figure>
     </div>
 </main>

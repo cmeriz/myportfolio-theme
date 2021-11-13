@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-    console.log('single-project.js loaded');
 
     var modal_background = $('.modal-background');
     var modal = $('.project-modal-container');
@@ -20,8 +19,6 @@ jQuery(document).ready(function($) {
             success: function (data) {
                 var project = JSON.parse(data);
                 modal_content.empty();
-
-                console.log(project);
 
                 // Generate HTML
                 var html = `
@@ -57,7 +54,7 @@ jQuery(document).ready(function($) {
 
                 html += `
                                 </ul>
-                                <a class="btn--primary inline-block mt-6 mb-4 xs:mb-0 xs:mr-4" href="${project.ext_url}" target="_blank" rel="noopener">Visitar sitio</a>
+                                <a class="btn--primary block xs:inline-block mt-6 mb-4 xs:mb-0 xs:mr-4" href="${project.ext_url}" target="_blank" rel="noopener">Visitar sitio</a>
                             </article>
                         </div>
                     </div>

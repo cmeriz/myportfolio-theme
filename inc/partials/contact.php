@@ -2,7 +2,7 @@
     <div class="grid grid-cols-2 gap-8 lg:mx-16 items-center text-secondary-500">
     
         <figure class="contact__column1 col-span-1 hidden md:block">
-            <img class="mx-auto w-4/5 xs:w-full mb-10 init-fadeInL2R" src="<?php the_post_thumbnail_url() ?>" alt="">
+            <?php the_post_thumbnail('post-thumbnail', ['class' => 'mx-auto w-4/5 xs:w-full mb-10 init-fadeInL2R', 'title' => 'Carlos Merizalde']); ?>
         </figure>
 
         <div class="contact__column2 col-span-2 md:col-span-1">

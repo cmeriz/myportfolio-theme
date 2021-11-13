@@ -968,20 +968,25 @@ video {
   .nav-link {
     padding: 1.5em 2em;
   }
-}/* line 24, ../scss/components/_navbar.scss */.nav-link:hover {
-  background-color: #179b6e;
-}/* line 27, ../scss/components/_navbar.scss */.nav-link:hover .nav-link__icon {
+}/* line 24, ../scss/components/_navbar.scss */.nav-link:focus {
+  background-color: #1AAC7A;
+}@media screen and (min-width: 48rem) {
+  /* line 28, ../scss/components/_navbar.scss */
+  .nav-link:hover {
+    background-color: #179b6e;
+  }
+}/* line 32, ../scss/components/_navbar.scss */.nav-link:hover .nav-link__icon {
   transform: scale(1.2);
-}/* line 32, ../scss/components/_navbar.scss */.nav-link__icon {
+}/* line 37, ../scss/components/_navbar.scss */.nav-link__icon {
   margin: auto;
   width: auto;
   height: 1.5rem;
   transition: transform .3s ease;
-}/* line 38, ../scss/components/_navbar.scss */.nav-link__icon path {
+}/* line 43, ../scss/components/_navbar.scss */.nav-link__icon path {
   fill: #FFFFFF;
-}/* line 44, ../scss/components/_navbar.scss */.nav-link.active {
+}/* line 49, ../scss/components/_navbar.scss */.nav-link.active {
   background-color: #179b6e;
-}/* line 47, ../scss/components/_navbar.scss */.nav-link.active .nav-link__icon {
+}/* line 52, ../scss/components/_navbar.scss */.nav-link.active .nav-link__icon {
   transform: scale(1.2);
 }/* line 1, ../scss/components/_buttons.scss */.btn, .btn--primary {
   padding: .8rem 2rem;
@@ -1218,6 +1223,8 @@ video {
 		margin-bottom: 0px;
 	}.xs\:mr-4{
 		margin-right: 1rem;
+	}.xs\:inline-block{
+		display: inline-block;
 	}.xs\:w-full{
 		width: 100%;
 	}

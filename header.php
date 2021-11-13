@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"  content="Soy Desarrollador Web. Me especializo en Sitios Informativos y Tiendas eCommerce. ¡Echa un vistazo a mis proyectos!">
     <title>Carlos Merizalde | Portafolio</title>
     <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri() ?>/favicon.png" type="image/x-icon">  
     <?php wp_head(); ?>

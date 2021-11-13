@@ -509,29 +509,35 @@ html {
   }
 }
 /* line 24, ../scss/components/_navbar.scss */
-.nav-link:hover {
-  background-color: #179b6e;
+.nav-link:focus {
+  background-color: #1AAC7A;
 }
-/* line 27, ../scss/components/_navbar.scss */
+@media screen and (min-width: 48rem) {
+  /* line 28, ../scss/components/_navbar.scss */
+  .nav-link:hover {
+    background-color: #179b6e;
+  }
+}
+/* line 32, ../scss/components/_navbar.scss */
 .nav-link:hover .nav-link__icon {
   transform: scale(1.2);
 }
-/* line 32, ../scss/components/_navbar.scss */
+/* line 37, ../scss/components/_navbar.scss */
 .nav-link__icon {
   margin: auto;
   width: auto;
   height: 1.5rem;
   transition: transform .3s ease;
 }
-/* line 38, ../scss/components/_navbar.scss */
+/* line 43, ../scss/components/_navbar.scss */
 .nav-link__icon path {
   fill: #FFFFFF;
 }
-/* line 44, ../scss/components/_navbar.scss */
+/* line 49, ../scss/components/_navbar.scss */
 .nav-link.active {
   background-color: #179b6e;
 }
-/* line 47, ../scss/components/_navbar.scss */
+/* line 52, ../scss/components/_navbar.scss */
 .nav-link.active .nav-link__icon {
   transform: scale(1.2);
 }
