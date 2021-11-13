@@ -5,6 +5,9 @@ $name = $project->post_name;
 $title = $project->post_title;
 $excerpt = $project->post_excerpt;
 $gallery_ids = get_post_custom($project->id)['_gallery'][0];
+$show = get_field('visibility', $project->ID);
+
+if($show):
 
 ?>
 
@@ -22,3 +25,7 @@ $gallery_ids = get_post_custom($project->id)['_gallery'][0];
         </a>
     </div>
 </article>
+
+<?php
+
+endif;

@@ -1,7 +1,8 @@
 <?php 
 
 const WPTAILWIND_THEME_VERSION = '1.0.0';
-const WP_ENVIRONMENT_TYPE = 'production';
+const WP_ENVIRONMENT_TYPE = 'development';
+//const WP_ENVIRONMENT_TYPE = 'production';
 
 
 /* -------------------------------------------------------------------------- */

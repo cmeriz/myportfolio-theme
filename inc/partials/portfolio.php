@@ -4,7 +4,7 @@
             Portafolio
         </h2>
         <div class="portfolio__grid grid grid-cols-2 gap-8 items-center">
-            <?php standard_post_query('projects', 10000, 'DESC', 'modified', 'inc/template-parts/project-card') ?>
+            <?php wt_portfolio_projects('projects', 10000, 'DESC', 'modified', 'inc/template-parts/project-card') ?>
         </div>
     </div>
 

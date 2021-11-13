@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
         $.ajax({
             type: "GET",
             url: admin_url.ajax_url,
-            data: { action: 'get_single_project', post_name},
+            data: { action: 'wt_get_single_project', post_name},
             success: function (data) {
                 var project = JSON.parse(data);
                 modal_content.empty();

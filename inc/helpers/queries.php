@@ -4,7 +4,7 @@
 /*                              STANDARD QUERIES                              */
 /* -------------------------------------------------------------------------- */
 
-function standard_post_query($post_type, $perpages, $order, $orderby, $template_part){        
+function wt_standard_post_query($post_type, $perpages, $order, $orderby, $template_part){        
     $args = array(
         'post_type' => $post_type,
         'posts_per_page' => 10000,
@@ -23,7 +23,7 @@ function standard_post_query($post_type, $perpages, $order, $orderby, $template_
 //                                AJAX QUERIES                               
 // --------------------------------------------------------------------------
 
-function get_single_project(){
+function wt_get_single_project(){
 
     $post_name = $_GET['post_name'];
 
@@ -61,5 +61,25 @@ function get_single_project(){
     exit();
 
 }
-add_action('wp_ajax_get_single_project', 'get_single_project');
-add_action('wp_ajax_nopriv_get_single_project', 'get_single_project');
+add_action('wp_ajax_wt_get_single_project', 'wt_get_single_project');
+add_action('wp_ajax_nopriv_wt_get_single_project', 'wt_get_single_project');
+
+
+/* -------------------------------------------------------------------------- */
+/*                           PROJECTS TO SHOW QUERY                           */
+/* -------------------------------------------------------------------------- */
+
+function wt_portfolio_projects($post_type, $perpages, $order, $orderby, $template_part){        
+    $args = array(
+        'post_type' => $post_type,
+        'posts_per_page' => 10000,
+        'order' => $order,
+        'orderby' => $orderby
+    );
+
+    $query = new WP_Query($args);
+
+    while($query->have_posts()): $query->the_post();
+        get_template_part($template_part);
+    endwhile; wp_reset_postdata();
+}
