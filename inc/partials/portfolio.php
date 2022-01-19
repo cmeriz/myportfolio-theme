@@ -1,10 +1,20 @@
 <section id="portfolio" class="portfolio inside-card text-secondary-500 pt-12 pb-12 relative">
+    
+    <div class="w-full mx-auto ml:w-11/12 lg:w-10/12 mb-24">
+        <h2 class="portfolio__title title-section mx-auto mb-16 text-center init-fadeInU2D">
+            Proyectos destacados
+        </h2>
+        <div class="portfolio__featured flex flex-col gap-24">
+            <?php wt_portfolio_projects('post', 10000, 'DESC', 'modified', 'published', 'inc/template-parts/project-featured') ?>
+        </div>
+    </div>
+
     <div class="w-full">
         <h2 class="portfolio__title title-section mx-auto mb-16 text-center init-fadeInU2D">
-            Portafolio
+            Otros proyectos
         </h2>
-        <div class="portfolio__grid grid grid-cols-2 gap-8 items-center">
-            <?php wt_portfolio_projects('projects', 10000, 'DESC', 'modified', 'inc/template-parts/project-card') ?>
+        <div class="portfolio__others grid grid-cols-2 gap-8 items-center">
+            <?php wt_portfolio_projects('projects', 10000, 'DESC', 'modified', 'published', 'inc/template-parts/project-card') ?>
         </div>
     </div>
 

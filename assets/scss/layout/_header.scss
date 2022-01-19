@@ -6,15 +6,24 @@
 
 .header{
     z-index: 4;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &.home{
+        padding: 0;
+        @include md-size{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
 
     @include md-size{
-        padding-left: 40px;
-        padding-right: 40px;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
 
     &__logo{
+        min-height: 4rem;
         width: 20%;
     }
 

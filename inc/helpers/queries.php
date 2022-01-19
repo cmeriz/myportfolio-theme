@@ -50,7 +50,8 @@ function wt_get_single_project(){
         'excerpt' => $project->post->post_excerpt,
         'content' => $project->post->post_content,
         'gallery_urls' => $gallery_urls,
-        'ext_url' => get_field('url', $project->post),
+        'web_url' => get_field('web_url', $project->post) ? get_field('web_url', $project->post) : false,
+        'github_url' => get_field('github_url', $project->post) ? get_field('github_url', $project->post) : false,
         'technologies' => get_the_terms($project->post, 'technologies')
     );  
 
@@ -69,12 +70,13 @@ add_action('wp_ajax_nopriv_wt_get_single_project', 'wt_get_single_project');
 /*                           PROJECTS TO SHOW QUERY                           */
 /* -------------------------------------------------------------------------- */
 
-function wt_portfolio_projects($post_type, $perpages, $order, $orderby, $template_part){        
+function wt_portfolio_projects($post_type, $perpages = 10000, $order, $orderby, $status, $template_part){        
     $args = array(
         'post_type' => $post_type,
-        'posts_per_page' => 10000,
+        'posts_per_page' => $perpages,
         'order' => $order,
-        'orderby' => $orderby
+        'orderby' => $orderby,
+        'status' => $status,
     );
 
     $query = new WP_Query($args);

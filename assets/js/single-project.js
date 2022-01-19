@@ -51,10 +51,17 @@ jQuery(document).ready(function($) {
                     html += '</ul>';
                 }
 
+                if(project.web_url){
+                    html += `<a class="btn--primary block xs:inline-block mt-6 mb-4 xs:mb-0 xs:mr-4" href="${project.web_url}" target="_blank" rel="noopener">Visitar sitio</a>`;
+                }
+
+                if(project.github_url){
+                    html += `
+                        <a class="btn--primary--outlined block xs:inline-block mt-6 mb-4 xs:mb-0" href="${project.github_url}" target="_blank" rel="noopener">Repositorio</a>`
+                    ;
+                }
 
                 html += `
-                                </ul>
-                                <a class="btn--primary block xs:inline-block mt-6 mb-4 xs:mb-0 xs:mr-4" href="${project.ext_url}" target="_blank" rel="noopener">Visitar sitio</a>
                             </article>
                         </div>
                     </div>
@@ -70,9 +77,7 @@ jQuery(document).ready(function($) {
                     slidesToScroll: 1,
                     arrows: false,
                     dots: true,            
-                });
-
-                
+                });                
             }
         });
 

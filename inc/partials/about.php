@@ -25,7 +25,7 @@
                           sm:mb-0 sm:mr-4" href="<?= get_field('curriculum_vitae', $post) ?>" target="_blank" rel="noopener">
                     Ver mi CV
                 </a>
-                <a href="#contact" class="btn--primary inline-block whitespace-nowrap">
+                <a href="#contact" class="btn--primary--outlined inline-block whitespace-nowrap">
                     Contactarme
                 </a>
             </div>            

@@ -11,6 +11,19 @@
     }
 }
 
+.project-featured{
+    @include ml-size{
+        &:nth-child(even){
+            .project-featured__content{
+                order: 2;
+            }
+            .project-featured__img{
+                order: 1;
+            }
+        }
+    }
+}
+
 .single-project{
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -55,11 +68,6 @@
                 background-position: center;
                 background-size: cover;
             }
-
-            a{
-                color: #3B82F6;
-            }
-
         }        
     }
 
