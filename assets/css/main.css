@@ -474,8 +474,6 @@ video {
 	height: 2rem;
 }.h-12{
 	height: 3rem;
-}.h-6{
-	height: 1.5rem;
 }.h-5{
 	height: 1.25rem;
 }.w-full{
@@ -488,16 +486,10 @@ video {
 	width: 2rem;
 }.w-12{
 	width: 3rem;
-}.w-3\/4{
-	width: 75%;
-}.w-6{
-	width: 1.5rem;
 }.w-5{
 	width: 1.25rem;
 }.max-w-sm{
 	max-width: 24rem;
-}.max-w-4xl{
-	max-width: 56rem;
 }.flex-1{
 	flex: 1 1 0%;
 }.transform{
@@ -616,9 +608,6 @@ video {
 }.text-lg{
 	font-size: 1.125rem;
 	line-height: 1.75rem;
-}.text-5xl{
-	font-size: 3rem;
-	line-height: 1;
 }.text-2xl{
 	font-size: 1.5rem;
 	line-height: 2rem;
@@ -1188,33 +1177,45 @@ video {
 }/* line 5, ../scss/views/_portfolio.scss */.portfolio__title::after {
   margin-left: auto;
   margin-right: auto;
+}/* line 16, ../scss/views/_portfolio.scss */.project-featured__content {
+  order: 2;
+}/* line 20, ../scss/views/_portfolio.scss */.project-featured__img {
+  order: 1;
 }@media screen and (min-width: 56rem) {
-  /* line 17, ../scss/views/_portfolio.scss */
-  .project-featured:nth-child(even) .project-featured__content {
-    order: 2;
-  }
-  /* line 20, ../scss/views/_portfolio.scss */
-  .project-featured:nth-child(even) .project-featured__img {
+  /* line 26, ../scss/views/_portfolio.scss */
+  .project-featured__content {
     order: 1;
   }
-}/* line 27, ../scss/views/_portfolio.scss */.single-project {
+  /* line 30, ../scss/views/_portfolio.scss */
+  .project-featured__img {
+    order: 2;
+  }
+  /* line 35, ../scss/views/_portfolio.scss */
+  .project-featured:nth-child(even) .project-featured__content {
+    order: 1 !important;
+  }
+  /* line 38, ../scss/views/_portfolio.scss */
+  .project-featured:nth-child(even) .project-featured__img {
+    order: 2 !important;
+  }
+}/* line 45, ../scss/views/_portfolio.scss */.single-project {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}/* line 31, ../scss/views/_portfolio.scss */.single-project::-webkit-scrollbar {
+}/* line 49, ../scss/views/_portfolio.scss */.single-project::-webkit-scrollbar {
   display: none;
-}/* line 37, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots {
+}/* line 55, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots {
   bottom: -50px;
-}/* line 41, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots li button::before {
+}/* line 59, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots li button::before {
   font-size: .7rem;
   color: #707070;
-}/* line 46, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots li.slick-active button::before {
+}/* line 64, ../scss/views/_portfolio.scss */.single-project__carousel .slick-dots li.slick-active button::before {
   color: #1AAC7A;
-}/* line 53, ../scss/views/_portfolio.scss */.single-project__features li {
+}/* line 71, ../scss/views/_portfolio.scss */.single-project__features li {
   position: relative;
   margin-left: 30px;
   margin-right: .5rem;
   margin-bottom: .5rem;
-}/* line 58, ../scss/views/_portfolio.scss */.single-project__features li::before {
+}/* line 76, ../scss/views/_portfolio.scss */.single-project__features li::before {
   position: absolute;
   left: -30px;
   content: '';

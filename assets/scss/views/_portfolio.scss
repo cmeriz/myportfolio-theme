@@ -12,13 +12,31 @@
 }
 
 .project-featured{
+
+    &__content{
+        order: 2;
+    }
+
+    &__img{
+        order: 1;
+    }
+
     @include ml-size{
+
+        &__content{
+            order: 1;
+        }
+    
+        &__img{
+            order: 2;
+        }
+
         &:nth-child(even){
             .project-featured__content{
-                order: 2;
+                order: 1 !important;
             }
             .project-featured__img{
-                order: 1;
+                order: 2 !important;
             }
         }
     }

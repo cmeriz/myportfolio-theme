@@ -775,47 +775,63 @@ a {
   margin-right: auto;
 }
 
+/* line 16, ../scss/views/_portfolio.scss */
+.project-featured__content {
+  order: 2;
+}
+/* line 20, ../scss/views/_portfolio.scss */
+.project-featured__img {
+  order: 1;
+}
 @media screen and (min-width: 56rem) {
-  /* line 17, ../scss/views/_portfolio.scss */
-  .project-featured:nth-child(even) .project-featured__content {
+  /* line 26, ../scss/views/_portfolio.scss */
+  .project-featured__content {
+    order: 1;
+  }
+  /* line 30, ../scss/views/_portfolio.scss */
+  .project-featured__img {
     order: 2;
   }
-  /* line 20, ../scss/views/_portfolio.scss */
+  /* line 35, ../scss/views/_portfolio.scss */
+  .project-featured:nth-child(even) .project-featured__content {
+    order: 1 !important;
+  }
+  /* line 38, ../scss/views/_portfolio.scss */
   .project-featured:nth-child(even) .project-featured__img {
-    order: 1;
+    order: 2 !important;
   }
 }
 
-/* line 27, ../scss/views/_portfolio.scss */
+/* line 45, ../scss/views/_portfolio.scss */
 .single-project {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-/* line 31, ../scss/views/_portfolio.scss */
+/* line 49, ../scss/views/_portfolio.scss */
 .single-project::-webkit-scrollbar {
   display: none;
 }
-/* line 37, ../scss/views/_portfolio.scss */
+/* line 55, ../scss/views/_portfolio.scss */
 .single-project__carousel .slick-dots {
   bottom: -50px;
 }
-/* line 41, ../scss/views/_portfolio.scss */
+/* line 59, ../scss/views/_portfolio.scss */
 .single-project__carousel .slick-dots li button::before {
   font-size: .7rem;
   color: #707070;
 }
-/* line 46, ../scss/views/_portfolio.scss */
+/* line 64, ../scss/views/_portfolio.scss */
 .single-project__carousel .slick-dots li.slick-active button::before {
   color: #1AAC7A;
 }
-/* line 53, ../scss/views/_portfolio.scss */
+/* line 71, ../scss/views/_portfolio.scss */
 .single-project__features li {
   position: relative;
   margin-left: 30px;
   margin-right: .5rem;
   margin-bottom: .5rem;
 }
-/* line 58, ../scss/views/_portfolio.scss */
+/* line 76, ../scss/views/_portfolio.scss */
 .single-project__features li::before {
   position: absolute;
   left: -30px;
